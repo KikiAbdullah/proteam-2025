@@ -12789,6 +12789,7 @@ button:focus {
   padding-left: 0;
 }
 .contact-list li {
+  font-size: 1.4rem;
   position: relative;
   padding-left: 3rem;
   margin-bottom: 1.4rem;
@@ -16334,13 +16335,13 @@ button:focus {
 }
 
 .btn-outline-shopee {
-  color: #EE4D2D;
-  border-color: #EE4D2D;
+  color: #ee4d2d;
+  border-color: #ee4d2d;
 }
 
 .btn-outline-shopee:hover {
   color: #fff;
-    background-color: #EE4D2D;
-    border-color: #EE4D2D;
+  background-color: #ee4d2d;
+  border-color: #ee4d2d;
 }
 /*# sourceMappingURL=style.css.map */
