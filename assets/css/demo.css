@@ -294,6 +294,18 @@
   height: calc(50% + 50vh);
   object-fit: cover;
 }
+
+@media screen and (max-width: 991px) {
+  .slider img {
+    position: absolute;
+    top: 0rem;
+    height: calc(50% + 50vh);
+    object-fit: cover;
+    width: 100%;
+    left: 0;
+  }
+}
+
 .logos {
   background-color: #f8f8f8;
   padding-top: 7rem;

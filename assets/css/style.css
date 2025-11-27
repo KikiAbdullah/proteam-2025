@@ -345,8 +345,11 @@ blockquote.text-white cite span {
   transition: transform 0.4s ease;
 }
 .mmenu-active .page-wrapper {
-  transform: translateX(200px);
+  transform: translateX(
+    -280px
+  ); /* Gunakan -280px jika lebar menu adalah 280px */
 }
+
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .page-wrapper {
     display: block;
@@ -2318,7 +2321,7 @@ blockquote.text-white cite span {
 }
 .mobile-menu-container {
   position: fixed;
-  left: -280px;
+  right: -280px;
   top: 0;
   bottom: 0;
   z-index: 1001;
@@ -2335,7 +2338,7 @@ blockquote.text-white cite span {
 }
 .mmenu-active .mobile-menu-container {
   visibility: visible;
-  transform: translateX(280px);
+  transform: translateX(-280px);
 }
 .mobile-menu-container .social-icons {
   justify-content: center;
@@ -2382,22 +2385,30 @@ blockquote.text-white cite span {
 .mobile-menu-close:focus {
   color: #e21e22;
 }
-.mobile-menu-overlay {
-  display: block;
+.mobile-menu-container {
   position: fixed;
-  left: 0;
+  right: -280px; /* POSISI AWAL: Di luar layar di sebelah KANAN */
   top: 0;
   bottom: 0;
-  right: 0;
-  background-color: rgba(25, 25, 25, 0.25);
-  z-index: 1000;
-  transition: all 0.4s;
+  z-index: 1001;
+  background-color: #333;
+  width: 100%;
+  max-width: 280px;
+  overflow-y: scroll;
+  box-shadow: 0.1rem 0 0.6rem 0 rgba(51, 51, 51, 0.5);
+  will-change: transform;
   visibility: hidden;
-  opacity: 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  transition: all 0.4s ease;
+  left: auto; /* Tambahkan ini untuk memastikan properti 'left' tidak mengganggu */
 }
-.mmenu-active .mobile-menu-overlay {
+
+.mmenu-active .mobile-menu-container {
   visibility: visible;
-  opacity: 1;
+  transform: translateX(
+    -280px
+  ); /* TRANSFORMASI: Geser ke KIRI 280px untuk masuk */
 }
 .mobile-nav {
   padding: 0;
